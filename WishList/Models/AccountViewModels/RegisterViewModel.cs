@@ -9,7 +9,7 @@ namespace WishList.Models.AccountViewModels
     public class RegisterViewModel
     {
         [Required]
-        [DataType(DataType.EmailAddress)]
+        [EmailAddress]
         public string Email { get; set; }
 
         [Required]
@@ -19,7 +19,7 @@ namespace WishList.Models.AccountViewModels
 
         [Required]
         [DataType(DataType.Password)]
-        [Compare("Email")]
+        [Compare("Password")]
         public string ConfirmPassword { get; set; }
     }
 }
