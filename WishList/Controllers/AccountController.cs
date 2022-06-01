@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace WishList.Controllers
 {
+    [Authorize]
     public class AccountController : Controller
     {
 
@@ -21,7 +22,7 @@ namespace WishList.Controllers
             _userManager = userManager;
             _signInManager = signInManager;
         }
-        [Authorize]
+       
         public IActionResult Index()
         {
             return View();
