@@ -81,7 +81,7 @@ namespace WishList.Controllers
         {
             if(ModelState.IsValid)
             {
-               var SignInResult =  _signInManager.PasswordSignInAsync("sandip", "sandip", true, false).Result;
+               var SignInResult =  _signInManager.PasswordSignInAsync(loginViewModel.Email, loginViewModel.Password, false, false).Result;
 
                 if(!SignInResult.Succeeded)
                 {
